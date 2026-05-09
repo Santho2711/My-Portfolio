@@ -1,0 +1,165 @@
+@use '../../assets/css/variables.scss' as *;
+
+@mixin trans() {
+    transition: all 0.3s;
+}
+
+.pg-btn {
+    font: 18px/25px $IM;
+    color: $white;
+    background: $black;
+    border-radius: 50px;
+    padding: 13px 30px;
+    border: 1px solid transparent;
+    @include trans();
+    text-align: center;
+
+    &.invert{
+
+    }
+    &.blk-red {
+        border-color: $black ;
+        background: transparent;
+        color: $black;
+
+        &:hover {
+            background: $orange;
+            border-color: transparent;
+            color: $white;
+        }
+    }
+
+    &.invert {
+        background: $orange;
+
+        &:hover {
+            background: $black;
+            color: $white;
+        }
+    }
+
+    &.white-red {
+        background: $white;
+        color: $black;
+
+        &:hover {
+            color: $white;
+            background: $orange;
+        }
+    }
+
+    &.red-white {
+        background: $orange;
+
+        &:hover,
+        &.pres {
+            background: $white;
+            color: $black;
+        }
+    }
+
+    &.black-white {
+        background: $black;
+
+        &:hover {
+            background: $white;
+            color: $black;
+        }
+    }
+
+    &.white-black {
+        background: $white;
+        color: $black;
+
+        &:hover {
+            background: $black;
+            color: $white;
+        }
+    }
+
+    &.red-black {
+        background: $orange;
+
+        &:hover {
+            background: $black;
+            color: $white;
+        }
+    }
+
+    &:hover {
+        background: $orange ;
+        // box-shadow: 5px 0px 10px 10px var(--primary-color);
+    }
+
+    &.button {
+        // display: block;
+        // width: 100%;
+    }
+
+    .btn_icon {
+        margin-right: 5px;
+
+        svg {
+            width: 23px;
+            height: 23px;
+            @include trans();
+            color: inherit;
+        }
+    }
+
+    &:disabled {
+        pointer-events: none;
+        opacity: 0.8;
+    }
+}
+
+
+
+@media screen and (max-width:1200px) {
+    .pg-btn {
+        font-size: 17px;
+        line-height: 25px;
+        padding: 10px 25px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .pg-btn {
+        font-size: 16px;
+        line-height: 22px;
+        padding: 10px 22px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .pg-btn {
+        font-size: 15px;
+        line-height: 20px;
+        padding: 10px 22px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .pg-btn {
+        .btn_icon {
+            margin-right: 3px;
+
+            svg {
+                width: 17px;
+                height: 17px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 379px) {
+    .pg-btn {
+        font-size: 14px;
+        padding: 10px 18px;
+    }
+
+    .pg-btn .btn_icon svg {
+        width: 14px;
+        height: 14px;
+    }
+}

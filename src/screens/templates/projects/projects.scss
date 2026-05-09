@@ -1,0 +1,16 @@
+@use '../../../assets/css/variables.scss' as *;
+
+.projects {
+    .project_lst {
+        li {
+            @include kill();
+
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .projects .project_lst li{
+        margin-bottom: 0;
+    }
+}

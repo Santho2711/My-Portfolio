@@ -1,0 +1,72 @@
+@use '../../../assets/css/variables.scss' as *;
+
+.tools {
+    .tool_lst {
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+            width: 45%;
+            @include kill();
+            a{
+                display: block;
+                padding: 10px;
+                border-radius: 15px;
+                @include trans();
+                pointer-events: none;
+                .img_{
+                    min-width: 70px;
+                    width: 70px;
+                    height: 70px;
+                    @include bordered;
+                    @include center;
+                    border-radius: 15px;
+                    background: $textColor;
+                    padding: 10px;
+                    margin-right: 15px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+                strong{
+                    margin-bottom: 0;
+                }
+                &:hover{
+                    background: $lightBackground;
+                }
+            }
+            &:not(:nth-child(2n)){
+                margin-right: 10%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .tools .tool_lst li a .img_{
+        min-width: 60px;
+        width: 60px;
+        height: 60px;
+        border-radius: 15px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .tools .tool_lst li a .img_ {
+        min-width: 55px;
+        width: 55px;
+        height: 55px;
+        border-radius: 10px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .tools .tool_lst li:not(:nth-child(2n)) {
+        margin-right: 0;
+    }
+    .tools .tool_lst li{
+        width: 100%;
+        margin-bottom: 0;
+    }
+}

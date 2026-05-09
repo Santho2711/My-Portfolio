@@ -1,0 +1,59 @@
+@use '../../../assets/css/variables.scss' as *;
+
+footer{
+    background: $lightBackground;
+    padding: 40px 0;
+    .inner_foot{
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            li{
+                // margin-bottom: 0;
+                padding-left: 0;
+                a{
+                    @include flx();
+                    svg{
+                        color:$white;
+                        width: 30px;
+                        height: 30px;
+                    }
+                    b{
+                        margin-left: 8px;
+                        font: 17px/25px $IM;
+                        color: $white;
+                    }
+                }
+                &:not(:last-child){
+                    margin-right: 10%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px){
+    footer{
+        padding: 30px 0;
+    }
+}
+@media screen and (max-width: 1100px){
+    footer{
+        padding: 20px 0;
+    }
+    footer .inner_foot ul li a b{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    footer .inner_foot ul li a b {
+        font-size: 15px;
+        line-height: 22px;
+    }
+    footer .inner_foot ul li a svg{
+        width: 25px;
+        height: 25px;
+    }
+}

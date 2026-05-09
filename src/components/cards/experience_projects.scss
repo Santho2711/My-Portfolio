@@ -1,0 +1,61 @@
+@use '../../assets/css/variables.scss' as *;
+.exp_proj {
+    padding: 15px 20px;
+    border-radius: 20px;
+    @include trans();
+    img{
+        min-width: 80px;
+        width: 80px;
+        height: 80px;
+        border-radius: 10px;
+        object-fit: cover;
+        overflow: hidden;
+        margin-right: 15px;
+
+    }
+    svg {
+        @include trans();
+        min-width: 35px;
+        width: 35px;
+        height: 35px;
+        color: $textColor;
+    }
+    &:hover {
+        background: $lightBackground;
+        svg{
+            transform: rotate(45deg);
+        }
+    }
+
+}
+
+@media screen and (max-width: 991px) {
+    .exp_proj img{
+        min-width: 70px;
+        width: 70px;
+        height: 70px;
+    }
+    .exp_proj{
+        padding: 15px;
+        .lft{
+            padding-right: 10px;
+        }
+    }
+    .exp_proj svg{
+        min-width: 30px;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .exp_proj {
+        padding: 10px;
+        border-radius: 15px;
+    }
+    .exp_proj img {
+        min-width: 65px;
+        width: 65px;
+        height: 65px;
+    }
+}

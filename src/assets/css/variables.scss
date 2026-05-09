@@ -1,0 +1,61 @@
+// fonts
+$IB: 'Inter-Bold';
+$IR: "Inter-Regular";
+$ISB: "Inter-SemiBold";
+$IM:"Inter-Medium";
+
+// colors
+$bodyBackground:#151312;
+$textColor:#fff;
+$lightTextColor:#b6b4bd33;
+$lightBackground:rgba(255, 255, 255, 0.03);
+$primary: #004643;
+$primarylight: #998f8f;
+$secondary: #27187e;
+$secondarylight: #f7f7ff;
+$black: #222;
+$cardback: #f0ede5;
+$white: #fff;
+$placeholder: #999;
+$darkblue: #10253a;
+$darklight: #516c88;
+$ratinggold: #fbe33f;
+$activegreen: #06a23a;
+$lightGreen: #daf5e3;
+$orange:#f46c38;
+
+
+@mixin kill() {
+    padding-left: 0;
+    &::before {
+        content: none;
+    }
+}
+
+@mixin trans() {
+    transition: all 0.4s;
+}
+
+@mixin flx {
+    display: flex;
+    align-items: center;
+}
+
+@mixin center {
+    @include flx();
+    justify-content: center;
+}
+
+@mixin round {
+    @include center();
+    border-radius: 50%;
+    overflow: hidden;
+
+    img {
+        object-fit: contain;
+    }
+}
+@mixin bordered {
+    border-radius: 20px;
+    overflow: hidden;
+}

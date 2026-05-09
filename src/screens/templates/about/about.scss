@@ -1,0 +1,66 @@
+@use '../../../assets/css/variables.scss' as *;
+
+.about{
+    p{
+        margin-bottom: 50px;
+    }
+    .num_blk{
+        @include flx();
+        .blk{
+            width: 170px;
+            p {
+                margin-bottom: 0;
+                font:15px/20px $IM;
+                text-transform: uppercase;
+                letter-spacing: 2;
+            }
+            strong{
+                font: 50px/60px $IB;
+                color: $textColor;
+            }
+        }
+    }
+    .btn_flx{
+        margin-top: 45px;
+        .pg-btn{
+            &:not(:last-child){
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px){
+    .about p {
+        margin-bottom: 40px;
+    }
+    .about .num_blk .blk strong{
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .about .num_blk .blk p{
+        font-size: 14px;
+    }
+    .about .btn_flx{
+        margin-top: 35px;
+    }
+}
+@media screen and (max-width: 880px){
+    .about p {
+        margin-bottom: 30px;
+    }
+    .about .num_blk .blk strong{
+        font-size: 35px;
+        line-height: 42px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .about .num_blk .blk strong {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .about .btn_flx{
+        margin-top: 25px;
+    }
+}
